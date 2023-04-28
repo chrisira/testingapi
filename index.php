@@ -22,6 +22,14 @@ curl_setopt_array($curl_handle,[
 // writting out the response text to a new variable
 
 $response = curl_exec($curl_handle);
+
+
+// getting status code from the server
+
+$status_code = curl_info($curl_handle,CURLINFO_HTTP_CODE);
+
+echo $status_code,'\n';
+
 curl_close($curl_handle);
 
 echo $response,'\n';
