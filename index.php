@@ -5,11 +5,11 @@
 $curl_handle = curl_init();
 
 $headers = array(
-    "Authorization: Client-ID 9yAExmas4hhPLtX_E6_XPh91x6MmpHDgZEt9_4Gbpco"
+    "Authorization: token TOKEN GOES HERE",
+    "User-Agent : chrisira"
 
 );
-// using response headers as an array and callback function
-$response_headers = [];
+// using user agent in headers to connect to github api
 
 $header_callback = function($curl_handle,$header) use(&$response_headers){
     $len = strlen($header);
@@ -21,7 +21,7 @@ $header_callback = function($curl_handle,$header) use(&$response_headers){
 
 curl_setopt_array($curl_handle,[
 
-    CURLOPT_URL => "https://api.unsplash.com/photos/random",
+    CURLOPT_URL => "https://api.github.com/user/starred/httpie/httpie",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_HEADERFUNCTION => $header_callback
