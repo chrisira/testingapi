@@ -14,7 +14,9 @@ curl_setopt_array($curl_handle,[
 
     CURLOPT_URL => "https://api.unsplash.com/photos/random",
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => $headers]
+    CURLOPT_HTTPHEADER => $headers,
+    CURLOPT_HEADER => true
+    ]
 
 );
 // writting out the response text to a new variable
