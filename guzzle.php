@@ -2,7 +2,7 @@
 require __DIR__ ."/vendor/autoload.php";
 
 // creating new guzzle client object
-$client = new GuzzleHttp\client;
+$client = new GuzzleHttp\client();
 
 // sending the request to the api
 
