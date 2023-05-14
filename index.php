@@ -9,7 +9,7 @@ $headers = array(
     // "User-Agent : chrisira"
 
 );
-// `using user agent in headers to connect to github api`
+// `using user agent in headers to conngit ect to github api`
 
 $header_callback = function($curl_handle,$header) use(&$response_headers){
     $len = strlen($header);
